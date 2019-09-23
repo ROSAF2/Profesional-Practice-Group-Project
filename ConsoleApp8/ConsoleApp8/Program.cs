@@ -8,8 +8,8 @@ namespace ConsoleApp8
 {
     class Program
     {
-        private static string[] question = new string[30];
-        private static string[] answer = new string[30];
+        private static string[] question = new string[50];
+        private static string[] answer = new string[50];
 
         public static void Method1()
         {
@@ -85,7 +85,7 @@ namespace ConsoleApp8
 
                 } while (innerCondition);
 
-                Console.WriteLine("Method 6");
+                Console.WriteLine("Method 5");
                 Console.WriteLine();
 
 
