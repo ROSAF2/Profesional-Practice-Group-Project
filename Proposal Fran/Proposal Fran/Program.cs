@@ -16,7 +16,7 @@ namespace Proposal_Fran
         {
             //Word arrays
             string[] positive = { "good", "fine", "nice", "better than ever", "hot" };
-            string[] negative = { "tired", "exhausted", "angry", "bad", "sick", "down", "blue" };
+            string[] negative = { "tired", "exhausted", "angry", "bad", "sick", "down", "blue", "sad" };
 
             bool loopCondition = true;
             bool nameCondition = true;
