@@ -12,6 +12,7 @@ namespace Group_1_AI_Project
     {
         class Program
         {
+            
             public static void Task1()
             {
 
