@@ -8,26 +8,27 @@ namespace ConsoleApp8
 {
     class Program
     {
-        private static string[] question = new string[30];
-        private static string[] answer = new string[30];
+        private static string[] question = new string[30]; //global array storing questions WE have created
+        private static string[] answer = new string[30]; //global array sotring user answers
 
-        public static void Method1()
+        public static void genreConor()
         {
-            string[] genre1 = {"Action","SciFi" ,"Drama","Horror", "War","Family"};
+            string[] genre1 = {"Action","SciFi" ,"Drama","Horror", "War","Family"}; //list of all available genres
 
 
             Console.WriteLine("Genre");
 
             Console.WriteLine("Which of the following genre do you prefer?");
 
-            foreach (var item in genre1)
+            foreach (var item in genre1)//foreach which displays all the genres in the genre array
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item); //here the user decides on their genre preference
             }
 
-            answer[0] = Console.ReadLine();
+            answer[0] = Console.ReadLine(); //answer0 is user's answer for genre preference
 
-            if ()
+
+            if () ;
 
 
 
@@ -48,9 +49,18 @@ namespace ConsoleApp8
 
         static void Main()
         {
-            Random rand = new Random();
+            //Program welcome and programmer credits
+            Console.WriteLine("Welcome to the Movie Reccomendation AI");
+            Console.WriteLine();
+            Console.WriteLine("This program was written by Jack Kelliher, Francisco Fernando Rosas Chavez, Kristen Collins, Jonny Zhu and Conor West");
+            Console.ReadLine();
+            Console.Clear();
+            //this runs once at program startup and clears when the user presses enter
+
+
+            Random rand = new Random();//this is a system to create a list in a random order
             int one, two, three, four, randomNumber,sum;
-            bool innerCondition, outerCondition = true;
+            bool innerCondition, outerCondition = true; //these control loops
 
             do
             {
@@ -65,10 +75,10 @@ namespace ConsoleApp8
                     sum = one + two + three + four;
                     randomNumber = rand.Next(1, 5);
 
-                    switch (randomNumber)
+                    switch (randomNumber)//this switch statement displays the list elements
                     {
                         case 1:
-                            if (one == 1) { Method1(); one = 0; }
+                            if (one == 1) { genreConor(); one = 0; }//methods are called here
                             break;
                         case 2:
                             if (two == 2) { Method2(); two = 0; }
