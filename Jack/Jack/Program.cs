@@ -34,10 +34,13 @@ namespace Jack
             string[] directorList = new string[5];
             //stores the users director choice and their genre
             string[] directorChoice = new string[2];
+            bool retry = true;
             string temp;
 
-            for(int i=30;i<35;i++)
+            for(int i=30;i<33;i++)
             {
+                do
+                { 
                 while (count < 5)
                 {
                     genreIndex = rand.Next(6);
@@ -78,42 +81,49 @@ namespace Jack
                     count++;
                 }
 
-                Console.WriteLine("Which of the following directors is your favourite: \nEnter 'retry' to refresh the list.");
+                Console.WriteLine("\nWhich of the following directors do you like?: \nEnter 'retry' to refresh the list.\n");
                 //Displaying randomly generated options
                 for (int j = 1; j < 6; j++)
                 {
                     Console.WriteLine($"{j}.{directorList[j-1]}");
                 }
-                //Reading user number choice as string
-                temp = Console.ReadLine();
+                    //Reading user number choice as string
+                    Console.Write("Number: ");
+                    temp = Console.ReadLine();
                 //Storing user choice in global array
-                switch (temp)
+                switch (temp.ToLower())
                 {
                     case "1":
                         question[i] = directorList[0];
-                        break;
+                            retry = true;
+                            break;
                     case "2":
                         question[i] = directorList[1];
-                        break;
+                            retry = true;
+                            break;
                     case "3":
                         question[i] = directorList[2];
-                        break;
+                            retry = true;
+                            break;
                     case "4":
                         question[i] = directorList[3];
-                        break;
+                            retry = true;
+                            break;
                     case "5":
                         question[i] = directorList[4];
-                        break;
-                    default:
+                            retry = true;
+                            break;
+                    case "retry":
+                        retry = false;
                         break;
                 }
-
-                count = 0; //Condition to reset the while loop
+                    count = 0; //Condition to reset the while loop
+                } while (retry == false) ;
             }
 
             //Displaying results by showing the information stored in the global array
-            Console.WriteLine("User results:");
-            for (int i = 30; i < 35; i++)
+            Console.WriteLine("\nUser results:\n");
+            for (int i = 30; i < 33; i++)
             {
                 Console.WriteLine(question[i]);
             }
