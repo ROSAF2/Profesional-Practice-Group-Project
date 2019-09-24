@@ -10,7 +10,7 @@ namespace ConsoleApp8
     {
 
         private static string[] question = new string[50]; //global array storing questions WE have created
-        private static string[] answer = new string[50]; //global array sotring user answers
+        private static string[] answer = new string[50]; //global array sorting user answers
         // answer[i]: 0-9 => Method1, 10-19 => Method2, 20-29 => Method3, 30-39 => Method4, 40-49 => Method5
 
         public static void genreConor()
@@ -35,15 +35,15 @@ namespace ConsoleApp8
 
 
         }
-        public static void Method2()
+        public static void actorsKristen()
         {
             Console.WriteLine("Method 2");
         }
-        public static void Method3()
+        public static void actressesKristen()
         {
             Console.WriteLine("Method 3");
         }
-        public static void Method4()
+        public static void directorsJack()
         {
             Console.WriteLine("Method 4");
         }
@@ -52,7 +52,7 @@ namespace ConsoleApp8
         static void Main()
         {
             //Program welcome and programmer credits
-            Console.WriteLine("Welcome to the Movie Reccomendation AI");
+            Console.WriteLine("Welcome to the Movie Recommendation AI");
             Console.WriteLine();
             Console.WriteLine("This program was written by Jack Kelliher, Francisco Fernando Rosas Chavez, Kristen Collins, Jonny Zhu and Conor West");
             Console.ReadLine();
