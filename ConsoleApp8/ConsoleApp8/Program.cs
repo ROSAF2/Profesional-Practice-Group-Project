@@ -8,6 +8,7 @@ namespace ConsoleApp8
 {
     class Program
     {
+        private static Random rand = new Random();//this is a system to create a list in a random order
 
         private static string[] question = new string[50]; //global array storing questions WE have created
         private static string[] answer = new string[50]; //global array sorting user answers
@@ -45,6 +46,7 @@ namespace ConsoleApp8
         }
         public static void directorsJack()
         {
+            Console.Write(rand.Next(10));
             string[] warDirectors = {"Brian G.Hutton", "Sam Mendes", "Francis Ford Coppola", "Peter Weir",
                 "Oliver Stone", "Zack Snyder", "Kathryn Bigelow"};
             string[] dramaDirectors = { "M.Night Shyamalan", "Christopher Nolan", "Martin Scorsese", "David Fincher" };
@@ -55,6 +57,8 @@ namespace ConsoleApp8
                 "Tim Burton", "Brad Silberling", "Chris Weitz", "Gore Verbinski"};
             string[] actionDirectors = {"Chad Stahelski", "David Leitch", "Doug Liman", "Joss Whedon", "Jon Favreau",
                 "Richard Donner", "Luc Besson", "Anthony Russo", "Joe Russo", "Kenneth Branagh", "Joe Johnston", "James Gunn", "Peyton Reed"};
+
+
 
         }
 
