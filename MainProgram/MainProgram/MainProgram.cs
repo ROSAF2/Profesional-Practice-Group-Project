@@ -40,45 +40,67 @@ namespace MainProgram
                 "Richard Donner", "Luc Besson", "Anthony Russo", "Joe Russo", "Kenneth Branagh", "Joe Johnston", "James Gunn", "Peyton Reed"};
 
             //genreIndex holds a random value for which genre the director will be picked from, directorIndex randomly gets an index of a director in genreIndex
-            int genreIndex, directorIndex, count = 0;
+            int genreIndex, directorIndex, count = 0, directorCount = 1;
+            //stores each director and their main associated genre
             string[] directorList = new string[5];
-
-            while (count < 5) {
-                genreIndex = rand.Next(6);
-                //Switch fills the array with the director names + the genre they are famous for. Use a .split(',') to split the slot into the director and genre
-                switch (genreIndex)
-                {
-                    case 0:
-                        directorIndex = rand.Next(warDirectors.Length);
-                        directorList[count] = warDirectors[directorIndex] + ", War";
-                        break;
-                    case 1:
-                        directorIndex = rand.Next(dramaDirectors.Length);
-                        directorList[count] = dramaDirectors[directorIndex] + ", Drama";
-                        break;
-                    case 2:
-                        directorIndex = rand.Next(scifiDirectors.Length);
-                        directorList[count] = scifiDirectors[directorIndex] + ", Sci-Fi";
-                        break;
-                    case 3:
-                        directorIndex = rand.Next(horrorDirectors.Length);
-                        directorList[count] = horrorDirectors[directorIndex] + ", Horror";
-                        break;
-                    case 4:
-                        directorIndex = rand.Next(familyDirectors.Length);
-                        directorList[count] = familyDirectors[directorIndex] + ", Family";
-                        break;
-                    case 5:
-                        directorIndex = rand.Next(actionDirectors.Length);
-                        directorList[count] = actionDirectors[directorIndex] + ", Action";
-                        break;
-                }
-                count++;
-            }
-            foreach (string i in directorList)
+            //stores the users director choice and their genre
+            string[] directorChoice = new string[2];
+            bool retry = true;
+            string temp;
+            do
             {
-                Console.WriteLine(i);
-            }
+                while (count < 5)
+                {
+                    genreIndex = rand.Next(6);
+                    //Switch fills the array with the director names + the genre they are famous for. Use a .split(',') to split the slot into the director and genre
+                    switch (genreIndex)
+                    {
+                        //Chooses a director from the War genre
+                        case 0:
+                            directorIndex = rand.Next(warDirectors.Length);
+                            directorList[count] = warDirectors[directorIndex] + ", War";
+                            break;
+                        //Chooses a director from the Drama genre
+                        case 1:
+                            directorIndex = rand.Next(dramaDirectors.Length);
+                            directorList[count] = dramaDirectors[directorIndex] + ", Drama";
+                            break;
+                        //Chooses a director from the Sci-Fi genre
+                        case 2:
+                            directorIndex = rand.Next(scifiDirectors.Length);
+                            directorList[count] = scifiDirectors[directorIndex] + ", Sci-Fi";
+                            break;
+                        //Chooses a director from the horror genre
+                        case 3:
+                            directorIndex = rand.Next(horrorDirectors.Length);
+                            directorList[count] = horrorDirectors[directorIndex] + ", Horror";
+                            break;
+                        //Chooses a director from the family genre
+                        case 4:
+                            directorIndex = rand.Next(familyDirectors.Length);
+                            directorList[count] = familyDirectors[directorIndex] + ", Family";
+                            break;
+                        //Chooses a director from the action genre
+                        case 5:
+                            directorIndex = rand.Next(actionDirectors.Length);
+                            directorList[count] = actionDirectors[directorIndex] + ", Action";
+                            break;
+                    }
+                    count++;
+                }
+                Console.WriteLine("Which of the following directors is your favourite: \nEnter 'retry' to refresh the list.");
+                foreach (string i in directorList)
+                {
+                    Console.WriteLine($"{directorCount}.{i}");
+                    directorCount++;
+                }
+                temp = Console.ReadLine();
+                if (temp.ToLower() != "retry")
+                {
+                    retry = false;
+                }
+                directorCount = 1;
+            } while (retry == true);
         }
 
 
