@@ -11,10 +11,50 @@ namespace MainProgram
         private static string[] question = new string[50]; //global array storing questions WE have created
         private static string[] answer = new string[50]; //global array storing user answers
         // answer[i]: 0-9 => Method1, 10-19 => Method2, 20-29 => Method3, 30-39 => Method4, 40-49 => Method5
+        
+
+        private readonly static string[] warMovieNames = { "Where Eagles Dare", "Jarhead", "Apocalypse Now", "Saving Private Ryan", "Paths of Glory",
+                "Das Boot", "Gallipolli", "Tora! Tora! Tora!", "Black Hawk Down", "Full Metal Jacket", "Platoon", "300", "The Hurt Locker"};
+        private readonly static string[] dramaMovieNames = { "Rear Window", "North by Northwest", "The Sixth Sense", "Inception", "Psycho", "The Departed", "Se7en",
+                "The Usual Suspects", "The Silence of the Lambs", "Snatch", "Reservoir Dogs" ,"L.A. Confidential", "Lock, Stock, and Two Smoking Barrels"};
+        private readonly static string[] scifiMovieNames = { "Mad Max: Fury Road", "E.T.", "Metropolis", "Gravity", "Star Wars: The Last Jedi", "Star Wars: Episode VII- The Force Awakens",
+                "Alien", "Star Wars: Episode IV- A New Hope", "Star Trek", "The Terminator", "Star Wars: Episode V- The Empire Strikes Back", "Aliens",
+                "Invasion of the Body Snatchers", "The Martian", "Blade Runner 2049", "Jurassic Park", "2001: A Space Odyssey", "Blade Runner", "Avatar", "The Matrix",
+                "A Clockwork Orange", "Star Trek Into Darkness", "Star Trek Beyond" };
+        private readonly static string[] hororMovieNames = {"Psycho", "The Exorcist", "Carrie", "Halloween", "Friday the 13th", "28 Days Later", "A Nightmare on Elm Street",
+                "The Silence of the Lambs", "The Ring", "Black Swan", "Shaun of the Dead", "The Cabin in the Woods", "Halloween (2018)", "IT (2017)", "Split"};
+        private readonly static string[] familyMovieNames = {"The Lord of the Rings: The Return of the King", "Home Alone", "Harry Potter and the Philosopher's Stone", "The Princess Bride",
+                "Beauty and the Beast", "Maleficent", "Night at the Musemum", "Where the Wild Things Are", "Charlie and the Chocolate Factory", "Alice in Wonderland",
+            "Lemony Snicket's A Series of Unfortunate Events", "The Golden Compass", "Pirates of the Caribbean: The Curse of the Black Pearl", "Men in Black"};
+        private readonly static string[] actionMovieNames = {"Kill Bill: Vol 1", "Terminator 2: Judgement Day", "The Matrix", "Die Hard", "Indiana Jones and the Raiders of the Lost Ark",
+                "The Dark Knight", "Aliens", "John Wick", "The Bourne Identity", "The Avengers", "Independence Day", "Iron Man", "Lethal Weapon", "The Fifth Element",
+            "Taken", "Avengers: Infinity War", "Thor", "Captain America: The First Avenger", "Guardians of the Galaxy", "Ant-Man", "Doctor Strange", "Spider-Man: Homecoming",
+                "Black Panther", "Captain Marvel" };
 
         public static void genreConor()
         {
             Console.WriteLine("genreConor");
+
+            string[] warMovieNames = { "Where Eagles Dare", "Jarhead", "Apocalypse Now", "Saving Private Ryan", "Paths of Glory",
+                "Das Boot", "Gallipolli", "Tora! Tora! Tora!", "Black Hawk Down", "Full Metal Jacket", "Platoon", "300", "The Hurt Locker"};
+            string[] dramaMovieNames = { "Rear Window", "North by Northwest", "The Sixth Sense", "Inception", "Psycho", "The Departed", "Se7en",
+                "The Usual Suspects", "The Silence of the Lambs", "Snatch", "Reservoir Dogs" ,"L.A. Confidential", "Lock, Stock, and Two Smoking Barrels"};
+            string[] scifiMovieNames = { "Mad Max: Fury Road", "E.T.", "Metropolis", "Gravity", "Star Wars: The Last Jedi", "Star Wars: Episode VII- The Force Awakens",
+                "Alien", "Star Wars: Episode IV- A New Hope", "Star Trek", "The Terminator", "Star Wars: Episode V- The Empire Strikes Back", "Aliens",
+                "Invasion of the Body Snatchers", "The Martian", "Blade Runner 2049", "Jurassic Park", "2001: A Space Odyssey", "Blade Runner", "Avatar", "The Matrix",
+                "A Clockwork Orange", "Star Trek Into Darkness", "Star Trek Beyond" };
+            string[] hororMovieNames = {"Psycho", "The Exorcist", "Carrie", "Halloween", "Friday the 13th", "28 Days Later", "A Nightmare on Elm Street",
+                "The Silence of the Lambs", "The Ring", "Black Swan", "Shaun of the Dead", "The Cabin in the Woods", "Halloween (2018)", "IT (2017)", "Split"};
+            string[] familyMovieNames = {"The Lord of the Rings: The Return of the King", "Home Alone", "Harry Potter and the Philosopher's Stone", "The Princess Bride",
+                "Beauty and the Beast", "Maleficent", "Night at the Musemum", "Where the Wild Things Are", "Charlie and the Chocolate Factory", "Alice in Wonderland",
+            "Lemony Snicket's A Series of Unfortunate Events", "The Golden Compass", "Pirates of the Caribbean: The Curse of the Black Pearl", "Men in Black"};
+            string[] actionMovieNames = {"Kill Bill: Vol 1", "Terminator 2: Judgement Day", "The Matrix", "Die Hard", "Indiana Jones and the Raiders of the Lost Ark",
+                "The Dark Knight", "Aliens", "John Wick", "The Bourne Identity", "The Avengers", "Independence Day", "Iron Man", "Lethal Weapon", "The Fifth Element",
+            "Taken", "Avengers: Infinity War", "Thor", "Captain America: The First Avenger", "Guardians of the Galaxy", "Ant-Man", "Doctor Strange", "Spider-Man: Homecoming",
+                "Black Panther", "Captain Marvel" };
+
+
+
         }
         public static void Method2()
         {
