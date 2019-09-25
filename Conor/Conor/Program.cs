@@ -15,8 +15,37 @@ namespace Conor
         //40-49 =>  Questions(Johny), 50-59 => Method0(Francisco),60-69 => Main(Francisco);
         private static Random rand = new Random();
 
+        public static void warMovieQuestions()
+        {
+            //arrays
+            string[] warQuestions = new string[15];//local questions for use within the method
+            string[] warAnswers = new string[15];
+            //local variables
+            
+
+            //war movie questions
+            warQuestions[0] = "What is it about War Movies that you like?";
+            warQuestions[1] = "Do you like World War movies or movies from another era?";
+            warQuestions[2] = "Do you have a genuine interest in war history?";
+            warQuestions[3] = "Do you mind the violence?";
+            warQuestions[4] = "Does your partner mind all the screaming and explosions?";
+
+
+            Console.Clear();
+            Console.WriteLine("War movies are exciting and gripping!");
+            Console.WriteLine("What is it about War Movies that you like?");
+
+            warAnswers[0] = Console.ReadLine();
+             if (warAnswers[0]) =
+
+
+        }
+
         public static void genreConor()
         {
+
+            //variables
+            string[] warQuestions = new string[15];//local questions for use within the method
             ///////////////Questions
             question[0] = "What is it about movies that you like?";
             question[1] = "Do you like War movies?";
@@ -27,12 +56,16 @@ namespace Conor
             question[6] = "Do you like Action movies?";
             question[7] = "Do you love me?";
             question[8] = "So, out of these genres \"\", which one do you like the most? ";
+            question[9] = "";
             string options = null; //Auxiliary string
-            /////////////////////////////////////////
+                                   /////////////////////////////////////////
+                                   ///
+
+            
 
             Console.WriteLine(question[0]);
             answer[0] = Console.ReadLine();
-
+            
             for (int i = 1; i < 7; i++)
             {
                 //Question 1 - 6
@@ -42,7 +75,9 @@ namespace Conor
                 {
                     switch (i)
                     {
-                        case 1: answer[i] = "War"; break;
+                        case 1: answer[i] = "War";
+                            warMovieQuestions();
+                            break;
                         case 2: answer[i] = "Drama"; break;
                         case 3: answer[i] = "SciFi"; break;
                         case 4: answer[i] = "Horror"; break;
