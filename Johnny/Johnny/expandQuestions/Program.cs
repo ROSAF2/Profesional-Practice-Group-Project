@@ -17,6 +17,17 @@ namespace expandQuestions
 
         public static void johnny()
         {
+            //Questions
+            question[40] = "Why do you prefer this genre?";
+            question[41] = "Do you like other genres?";
+            question[42] = "Why do you prefer this movie/title";
+            question[43] = "On a scale from 1-5 how did you like the movie?";
+            question[44] = "Do you like other movies/titles?";
+            question[45] = "Why do you like this actor/actress?";
+            question[46] = "Do you like other actors/actresses?";
+            question[47] = "Does the year when they come out affect if you would watch it?";
+            question[48] = "Why do you prefer this director?";
+            question[49] = "Do you like any other directors?";
 
             //answers to the question
             string[] preferGenreAnswers = { "Visual Effects", "Its my favorite genre", "Funny", "It makes me cry :(", "My favorite actor/actress plays in these types of genres", "Other" };
@@ -27,33 +38,24 @@ namespace expandQuestions
             string[] likeActorAnswers = { "Reminds me of myself", "They are my favourite actor/actress", "They are funny", "I like their personality", "Other" };
             string[] otherActorAnswers = { "Yes", "No" };
             string[] yearAffectAnswers = { "Yes", "No" };
-            string[] uWu = { "Yes", "No","UwU" };
+            string[] preferDirectorAnswers = {"They are my favorite director", "They direct my favorite movies", "Other"  };
+            string[] likeDirectorAnswers = { "Yes", "No"};
+
 
                
-        //Questions
-            question[40] = "Why do you prefer this genre?";
-            question[41] = "Do you like other genres?";
-            question[42] = "Why do you prefer this movie/title";
-            question[43] = "On a scale from 1-5 how did you like the movie?";
-            question[44] = "Do you like other movies/titles?";
-            question[45] = "Why do you like this actor/actress?";
-            question[46] = "Do you like other actors/actresses?";
-            question[47] = "Does the year when they come out affect if you would watch it?";
-            //Troll Questions
-            question[48] = "Do you like Anime?";
-            //question[49] = "";
 
 
-            for (int i = 40; i < 49; i++)
+
+            for (int i = 40; i < 50; i++)
             {
-                //Question 40 - 47
+                //Question 40 - 49
                 Console.WriteLine("\n" + question[i] +"\n");
                 for (int j = 0; j < preferGenreAnswers.Length; j++)
                 {
                     Console.WriteLine(preferGenreAnswers[j]);
                     
                 }
-                //This makes it so the answers are on the right questions
+                //This makes it so the answers show up under the right questions
                 preferGenreAnswers = likeGenreAnswers;
                 likeGenreAnswers = preferMovieAnswers;
                 preferMovieAnswers = scaleMovieAnswers;
@@ -61,11 +63,14 @@ namespace expandQuestions
                 otherMovieAnswers = likeActorAnswers;
                 likeActorAnswers = otherActorAnswers;
                 otherActorAnswers = yearAffectAnswers;
-                yearAffectAnswers = uWu;
+                yearAffectAnswers = preferDirectorAnswers;
+                preferDirectorAnswers = likeDirectorAnswers;
 
 
 
+                Console.WriteLine();
                 answer[i] = Console.ReadLine();
+                Console.Clear();
                 
 
 
