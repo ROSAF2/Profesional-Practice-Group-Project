@@ -31,11 +31,11 @@
                 //genreIndex holds a random value for which genre the director will be picked from, directorIndex randomly gets an index of a director in genreIndex
                 int genreIndex, directorIndex, count = 0;
                 //stores each director and their main associated genre
-                string[] directorList = new string[5];
+                string[] directorList = new string[5], splitDirectors = new string[2];
                 //stores the users director choice and their genre
                 string[] directorChoice = new string[2];
                 bool retry = true;
-                string temp;
+                string temp, directorStyle, reccomendDirector="", directorName;
 
 
                 //loop to generate three questions and to generate 5 random directors to choose from for each
@@ -52,37 +52,36 @@
                                 //Chooses a director from the War genre
                                 case 0:
                                     directorIndex = rand.Next(warDirectors.Length);
-                                    directorList[count] = warDirectors[directorIndex] + ", War";
+                                    directorList[count] = warDirectors[directorIndex] + ",War";
                                     break;
                                 //Chooses a director from the Drama genre
                                 case 1:
                                     directorIndex = rand.Next(dramaDirectors.Length);
-                                    directorList[count] = dramaDirectors[directorIndex] + ", Drama";
+                                    directorList[count] = dramaDirectors[directorIndex] + ",Drama";
                                     break;
                                 //Chooses a director from the Sci-Fi genre
                                 case 2:
                                     directorIndex = rand.Next(scifiDirectors.Length);
-                                    directorList[count] = scifiDirectors[directorIndex] + ", Sci-Fi";
+                                    directorList[count] = scifiDirectors[directorIndex] + ",Sci-Fi";
                                     break;
                                 //Chooses a director from the horror genre
                                 case 3:
                                     directorIndex = rand.Next(horrorDirectors.Length);
-                                    directorList[count] = horrorDirectors[directorIndex] + ", Horror";
+                                    directorList[count] = horrorDirectors[directorIndex] + ",Horror";
                                     break;
                                 //Chooses a director from the family genre
                                 case 4:
                                     directorIndex = rand.Next(familyDirectors.Length);
-                                    directorList[count] = familyDirectors[directorIndex] + ", Family";
+                                    directorList[count] = familyDirectors[directorIndex] + ",Family";
                                     break;
                                 //Chooses a director from the action genre
                                 case 5:
                                     directorIndex = rand.Next(actionDirectors.Length);
-                                    directorList[count] = actionDirectors[directorIndex] + ", Action";
+                                    directorList[count] = actionDirectors[directorIndex] + ",Action";
                                     break;
-                        }
+                            }
                         count++; //goes on to get next random director
-                    }
-
+                        }
 
 
                     Console.WriteLine("\nWhich of the following directors do you like?: \nEnter 'retry' to refresh the list.\n");
@@ -96,18 +95,51 @@
                     temp = Console.ReadLine();
                     if (temp != "retry")
                     {
-                        question[i] = directorList[Convert.ToInt32(temp) - 1];
+                        answer[i] = directorList[Convert.ToInt32(temp) - 1];
                         retry = true;
                     }
                     count = 0; //Condition to reset the while loop
                     } while (retry == false);
                 }
 
-                //Displaying results by showing the information stored in the global array
-                Console.WriteLine("\nUser results:\n");
+            temp = answer[rand.Next(30, 34)];
+            splitDirectors = temp.Split(',');
+            directorStyle = splitDirectors[1].ToLower();
+            directorName = splitDirectors[0];
+            switch (directorStyle)
+            {
+                case "war":
+                    reccomendDirector = warDirectors[rand.Next(warDirectors.Length)];
+                    break;
+                case "drama":
+                    reccomendDirector = dramaDirectors[rand.Next(dramaDirectors.Length)];
+                    break;
+                case "sci-fi":
+                    reccomendDirector = scifiDirectors[rand.Next(scifiDirectors.Length)];
+                    break;
+                case "horror":
+                    reccomendDirector = horrorDirectors[rand.Next(horrorDirectors.Length)];
+                    break;
+                case "family":
+                    reccomendDirector = familyDirectors[rand.Next(familyDirectors.Length)];
+                    break;
+                case "action":
+                    reccomendDirector = actionDirectors[rand.Next(actionDirectors.Length)];
+                    break;
+            }
+
+            Console.WriteLine($"You enjoy the work of {directorName}, famous {directorStyle} director. Are you familiar with {reccomendDirector}?");
+            answer[34] = reccomendDirector + "," + Console.ReadLine();
+            Console.Write(answer[34]);
+
+
+
+
+            //Displaying results by showing the information stored in the global array
+            Console.WriteLine("\nUser results:\n");
                 for (int i = 30; i < 33; i++)
                 {
-                    Console.WriteLine(question[i]);
+                    Console.WriteLine(answer[i]);
                 }
 
             }
