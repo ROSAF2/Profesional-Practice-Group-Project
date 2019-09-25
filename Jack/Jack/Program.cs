@@ -99,13 +99,18 @@
                         retry = true;
                     }
                     count = 0; //Condition to reset the while loop
+                    Console.Clear();
                     } while (retry == false);
                 }
 
+            // temp generate a random director from the chosen directors
             temp = answer[rand.Next(30, 34)];
+            // splitDirectors splits the temp value up into two values, the director and the genre they are famous for
             splitDirectors = temp.Split(',');
             directorStyle = splitDirectors[1].ToLower();
-            directorName = splitDirectors[0];
+            directorName = splitDirectors[0]; // saves the directors name into a unique variable
+
+            //gets another director according to the genre the splitDirectors value is associated with
             switch (directorStyle)
             {
                 case "war":
@@ -128,11 +133,21 @@
                     break;
             }
 
+            //refers the user to a similar director, and asks if they know them.
             Console.WriteLine($"You enjoy the work of {directorName}, famous {directorStyle} director. Are you familiar with {reccomendDirector}?");
             answer[34] = reccomendDirector + "," + Console.ReadLine();
             Console.Write(answer[34]);
 
-
+            for (int i = 30; i < 33; i++)
+            {
+                if (answer[i].Contains(reccomendDirector) && answer[35].Contains('n'))
+                {
+                    Console.WriteLine($"You claimed you were not familiar with {reccomendDirector}, but you chose them as a liked director in earlier questions?");
+                } else if (answer[i].Contains(reccomendDirector) && answer[35].Contains('y'))
+                {
+                    Console.WriteLine($"I know you are familiar with them, you picked {reccomendDirector} as a liked director");
+                }
+            }
 
 
             //Displaying results by showing the information stored in the global array
