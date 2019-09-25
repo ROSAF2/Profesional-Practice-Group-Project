@@ -131,7 +131,10 @@ namespace Test
                 {
                     switch (i)
                     {
-                        case 1: answer[i] = "War"; break;
+                        case 1:
+                            answer[i] = "War";
+                            warMovieQuestions();
+                            break;
                         case 2: answer[i] = "Drama"; break;
                         case 3: answer[i] = "SciFi"; break;
                         case 4: answer[i] = "Horror"; break;
@@ -158,6 +161,74 @@ namespace Test
             Console.WriteLine(question[8].Insert(30, options.Trim()));
             answer[8] = Console.ReadLine();
             //////////////////////////////////////////////////
+        }
+        public static void warMovieQuestions()
+        {
+            //arrays
+            string[] warQuestions = new string[15];//local questions for use within the method
+            string[] possibleAnswers0 = { "war", "narrative", "story", "setting", "action", "explosions", "history", "gunfights", "violence", "blood", "scenes", "people dying" }; //possible answers for war questions 0
+            string[] possibleAnswers1 = { "world war", "world war 2", "ww2", "second world war", "yes" };
+            string[] possibleAnswers2 = { "yes", "y" };
+
+            //local variables
+            string userAnswer;
+
+            //war movie questions
+            warQuestions[0] = "What do you like about them?";
+            warQuestions[1] = "Do you like World War movies or movies from another era?";
+            warQuestions[2] = "Do you have a genuine interest in war history?";
+            warQuestions[3] = "Do you mind the violence?";
+            warQuestions[4] = "Does your partner mind all the screaming and explosions?";
+
+
+            Console.Clear();
+            //if (yes)
+            Console.WriteLine("War movies are exciting and gripping!");
+            Console.WriteLine(warQuestions[0]);
+            Console.Write("The: ");
+            userAnswer = Console.ReadLine();
+
+
+
+            if (possibleAnswers0.Contains(userAnswer.ToLower()))
+            {
+                Console.WriteLine("I also like War movies for the " + userAnswer);
+            }
+
+            else
+            {
+                Console.WriteLine("I see, that's pretty interesting");
+            }
+            Console.WriteLine();
+            Console.WriteLine(warQuestions[1]); //Do you like World War movies or movies from another era?
+            userAnswer = Console.ReadLine();
+            userAnswer.ToLower();
+
+            if (userAnswer[0] == 'y')
+            {
+                Console.WriteLine("The World Wars have some good movies set in the period");
+
+            }
+            else
+            {
+                Console.WriteLine("There are some great movies set in eras other than the World Wars");
+            }
+            Console.WriteLine();
+            Console.WriteLine(warQuestions[2]);//Do you have a genuine interest in war history?
+            userAnswer = Console.ReadLine();
+            userAnswer.ToLower();
+            Console.WriteLine("Why?");
+            Console.Write("Because: ");
+            answer[67] = Console.ReadLine();
+
+            if (userAnswer[0] == 'y')
+            {
+                Console.WriteLine("It's important to have an understanding of military history");
+            }
+            else Console.WriteLine("Me neither to be honest!");
+
+            Console.WriteLine("\nBecause you frankly said that {0}. What would you rather watch instead?", answer[67]);
+            answer[68] = Console.ReadLine();
         }
 
         public static void MaleActors()
@@ -595,7 +666,8 @@ namespace Test
                 }
                 else
                 {
-                    Console.WriteLine("\nI was going to recommend another movie but you don't love me... \n(TT-TT)");
+                    Console.WriteLine("\nI was going to recommend another movie but you don't love me...");
+                    Console.WriteLine("So you can go watch {0} instead...\n(TT-TT)", answer[68]);
                 }
             }
         }
