@@ -19,9 +19,13 @@ namespace Conor
         {
             //arrays
             string[] warQuestions = new string[15];//local questions for use within the method
-            string[] warAnswers = new string[15];
+            string[] possibleAnswers0 = { "narrative", "story", "setting", "action", "explosions", "history", "gunfights" }; //possible answers for war questions 0
+            string[] possibleAnswers1 = {"world war", "world war 2", "ww2", "second world war", "yes"};
+            string[] possibleAnswers2 = { "yes", "y" };
+
             //local variables
-            
+            string userAnswer;
+            bool likesWorldWar = false;
 
             //war movie questions
             warQuestions[0] = "What is it about War Movies that you like?";
@@ -34,11 +38,55 @@ namespace Conor
             Console.Clear();
             Console.WriteLine("War movies are exciting and gripping!");
             Console.WriteLine("What is it about War Movies that you like?");
+            
 
-            warAnswers[0] = Console.ReadLine();
-             if (warAnswers[0]) =
+            userAnswer = Console.ReadLine();
+
+           
+
+            if (possibleAnswers0.Contains(userAnswer) )
+            {
+                Console.WriteLine("I also like War movies for the " + userAnswer);
+                Console.WriteLine("");
+            }
+
+            else
+            {
+                Console.WriteLine("I didn't understand that");
+            }
+
+            Console.Clear();
+            Console.WriteLine(warQuestions[1]); //Do you like World War movies or movies from another era?
+
+            userAnswer = Console.ReadLine();
 
 
+            if (possibleAnswers1.Contains(userAnswer))
+            {
+                Console.WriteLine("The World Wars have some good movies set in the period");
+                likesWorldWar = true;
+              
+            }
+            else
+            {
+                Console.WriteLine("There are some great movies set in eras other than the World Wars");
+                likesWorldWar = false;
+            }
+
+            Console.Clear();
+
+            Console.WriteLine(warQuestions[2]);//Do you have a genuine interest in war history?
+            userAnswer = Console.ReadLine();
+
+            if (possibleAnswers2.Contains(userAnswer))
+            {
+                Console.WriteLine("It's important to have an understanding of military history");
+
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
         }
 
         public static void genreConor()
@@ -109,7 +157,7 @@ namespace Conor
         static void Main(string[] args)
         {
 
-            genreConor();
+            warMovieQuestions();
 
             Console.ReadLine();
         }
