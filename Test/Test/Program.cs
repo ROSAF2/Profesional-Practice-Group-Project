@@ -181,7 +181,6 @@ namespace Test
             warQuestions[4] = "Does your partner mind all the screaming and explosions?";
 
 
-            Console.Clear();
             //if (yes)
             Console.WriteLine("War movies are exciting and gripping!");
             Console.WriteLine(warQuestions[0]);
@@ -506,7 +505,6 @@ namespace Test
                         retry = true;
                     }
                     count = 0; //Condition to reset the while loop
-                    Console.Clear();
                 } while (retry == false);
             }
 
@@ -543,7 +541,7 @@ namespace Test
             //refers the user to a similar director, and asks if they know them.
             Console.WriteLine($"You enjoy the work of {directorName}, famous {directorStyle} director. Are you familiar with {reccomendDirector}, another {directorStyle} director?");
             answer[34] = reccomendDirector + "," + Console.ReadLine();
-            Console.Clear();
+            answer[34] = reccomendDirector + "," + Console.ReadLine();
 
             for (int i = 30; i < 33; i++)
             {
@@ -552,7 +550,6 @@ namespace Test
                     Console.WriteLine($"You claimed you were not familiar with {reccomendDirector}, but you chose them as a liked director in earlier questions, are you sure you didn't mean yes?");
                     string fixUp;
                     fixUp = Console.ReadLine();
-                    Console.Clear();
                     if (fixUp.Contains('y'))
                     {
                         Console.WriteLine("Just as I thought!");
