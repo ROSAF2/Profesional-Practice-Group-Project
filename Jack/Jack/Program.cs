@@ -139,6 +139,7 @@
             //refers the user to a similar director, and asks if they know them.
             Console.WriteLine($"You enjoy the work of {directorName}, famous {directorStyle} director. Are you familiar with {reccomendDirector}, another {directorStyle} director?");
             answer[34] = reccomendDirector + "," + Console.ReadLine();
+            Console.Clear();
 
             for (int i = 30; i < 33; i++)
             {
@@ -147,6 +148,7 @@
                     Console.WriteLine($"You claimed you were not familiar with {reccomendDirector}, but you chose them as a liked director in earlier questions, are you sure you didn't mean yes?");
                     string fixUp;
                     fixUp = Console.ReadLine();
+                    Console.Clear();
                     if (fixUp.Contains('y'))
                     {
                         Console.WriteLine("Just as I thought!");
