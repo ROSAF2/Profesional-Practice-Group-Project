@@ -13,8 +13,11 @@ namespace MainProgram
                                                          // answer[i]: 0-9 => Method1, 10-19 => Method2, 20-29 => Method3, 30-39 => Method4, 40-49 => Method5
 
 
+            public static void Main(String[] args)
+        {
 
-        private static string[] warMovieNames = { "Where Eagles Dare", "Jarhead", "Apocalypse Now", "Saving Private Ryan", "Paths of Glory",
+        }
+        /**private static string[] warMovieNames = { "Where Eagles Dare", "Jarhead", "Apocalypse Now", "Saving Private Ryan", "Paths of Glory",
                 "Das Boot", "Gallipolli", "Tora! Tora! Tora!", "Black Hawk Down", "Full Metal Jacket", "Platoon", "300", "The Hurt Locker"};
         private static string[] dramaMovieNames = { "Rear Window", "North by Northwest", "The Sixth Sense", "Inception", "Psycho", "The Departed", "Se7en",
                 "The Usual Suspects", "The Silence of the Lambs", "Snatch", "Reservoir Dogs" ,"L.A. Confidential", "Lock, Stock, and Two Smoking Barrels"};
@@ -130,7 +133,7 @@ namespace MainProgram
         public static void Method3()
         {
             Console.WriteLine("Method 3");
-        }
+        } */
         public static void Method4()
         {
             //databases for all directors and what genres they are most famous for
