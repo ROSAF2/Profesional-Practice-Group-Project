@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Method 3 Actresses", "Method 3 Actresses.csproj", "{583A0781-F580-46E1-AD77-9662FC0EBB5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KristenActresses", "KristenActresses\KristenActresses.csproj", "{44C8C3B7-F53C-48C1-AB53-3A401A11B8B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{583A0781-F580-46E1-AD77-9662FC0EBB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{583A0781-F580-46E1-AD77-9662FC0EBB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{583A0781-F580-46E1-AD77-9662FC0EBB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{583A0781-F580-46E1-AD77-9662FC0EBB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C8C3B7-F53C-48C1-AB53-3A401A11B8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C8C3B7-F53C-48C1-AB53-3A401A11B8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C8C3B7-F53C-48C1-AB53-3A401A11B8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C8C3B7-F53C-48C1-AB53-3A401A11B8B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2E2E7B13-3386-44AE-B10F-2B039AFC29B5}
+		SolutionGuid = {6B14AD9B-4325-4AF2-B5F2-17577C66A6A4}
 	EndGlobalSection
 EndGlobal

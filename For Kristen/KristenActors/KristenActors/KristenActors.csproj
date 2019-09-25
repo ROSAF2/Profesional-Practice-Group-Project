@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E32D860-3DE5-4552-9FA4-471857FE10C9}</ProjectGuid>
+    <ProjectGuid>{592B0A46-7249-421C-8DF8-3B23440C2804}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp10</RootNamespace>
-    <AssemblyName>ConsoleApp10</AssemblyName>
+    <RootNamespace>KristenActors</RootNamespace>
+    <AssemblyName>KristenActors</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

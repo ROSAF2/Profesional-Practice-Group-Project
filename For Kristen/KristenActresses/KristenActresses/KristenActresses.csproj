@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{583A0781-F580-46E1-AD77-9662FC0EBB5E}</ProjectGuid>
+    <ProjectGuid>{44C8C3B7-F53C-48C1-AB53-3A401A11B8B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Method_3_Actresses</RootNamespace>
-    <AssemblyName>Method 3 Actresses</AssemblyName>
+    <RootNamespace>KristenActresses</RootNamespace>
+    <AssemblyName>KristenActresses</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actresses.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
